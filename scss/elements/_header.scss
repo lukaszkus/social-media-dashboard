@@ -1,0 +1,73 @@
+//header
+
+.container {
+  .header {
+    .heading {
+      border-bottom: 1px solid var(--big-txt-color);
+      &__title {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: var(--big-txt-color);
+        padding: 3rem 0 0.5rem 0;
+      }
+      &__subtitle {
+        font-size: 1rem;
+        color: var(--small-txt-color);
+        padding-bottom: 2rem;
+      }
+    }
+    .theme {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0 3rem 0;
+      &__name {
+        font-size: 1rem;
+        color: var(--small-txt-color);
+      }
+      &__toggle {
+        input[type="checkbox"] {
+          height: 0;
+          width: 0;
+          visibility: hidden;
+        }
+
+        label {
+          cursor: pointer;
+          text-indent: -9999px;
+          width: 52px;
+          height: 27px;
+          background: var(--toggle);
+          float: right;
+          border-radius: 100px;
+          position: relative;
+        }
+
+        label:after {
+          content: "";
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          width: 20px;
+          height: 20px;
+          background: $color-light;
+          border-radius: 90px;
+          transition: 0.3s;
+        }
+
+        input:checked + label {
+          background: var(--toggle);
+        }
+
+        input:checked + label:after {
+          left: calc(100% - 5px);
+          transform: translateX(-100%);
+        }
+
+        label:active:after {
+          width: 45px;
+        }
+      }
+    }
+  }
+}

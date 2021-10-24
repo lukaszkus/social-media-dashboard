@@ -1,4 +1,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+.container .header .heading {
+  border-bottom: 1px solid var(--big-txt-color);
+}
+.container .header .heading__title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--big-txt-color);
+  padding: 3rem 0 0.5rem 0;
+}
+.container .header .heading__subtitle {
+  font-size: 1rem;
+  color: var(--small-txt-color);
+  padding-bottom: 2rem;
+}
+.container .header .theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0 3rem 0;
+}
+.container .header .theme__name {
+  font-size: 1rem;
+  color: var(--small-txt-color);
+}
+.container .header .theme__toggle input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.container .header .theme__toggle label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: var(--toggle);
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+.container .header .theme__toggle label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.container .header .theme__toggle input:checked + label {
+  background: var(--toggle);
+}
+.container .header .theme__toggle input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+.container .header .theme__toggle label:active:after {
+  width: 45px;
+}
+
+:root {
+  --top-bg-color: #f5f7ff;
+  --bg-color: white;
+  --card-bg-color: #f0f2fa;
+  --small-txt-color: #63687e;
+  --big-txt-color: #1e202a;
+  --toggle: #aeb3cb;
+}
+
+.dark {
+  --top-bg-color: #1f212e;
+  --bg-color: #1e202a;
+  --card-bg-color: #252a41;
+  --small-txt-color: #8b97c6;
+  --big-txt-color: white;
+  --toggle: linear-gradient(#378fe6, #3eda82);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,5 +86,17 @@
 
 html {
   font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+  background-color: var(--top-bg-color);
 }
 /*# sourceMappingURL=main.css.map */

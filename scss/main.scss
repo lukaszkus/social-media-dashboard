@@ -1,6 +1,30 @@
-@import "./fonts";
-@import "./variables";
-@import "./mixins";
+@use "sass:map";
+
+//import settings
+@import "./settings/fonts";
+@import "./settings/variables";
+@import "./settings/mixins";
+
+//import elements
+@import "./elements/header";
+
+:root {
+  --top-bg-color: #{$color-very-pale};
+  --bg-color: #{$color-light};
+  --card-bg-color: #{$color-grayish-light};
+  --small-txt-color: #{$color-grayish-dark};
+  --big-txt-color: #{$color-very-dark};
+  --toggle: #{$color-toggle-light};
+}
+
+.dark {
+  --top-bg-color: #{$color-dark};
+  --bg-color: #{$color-very-dark};
+  --card-bg-color: #{$color-desaturated-dark};
+  --small-txt-color: #{$color-desaturated};
+  --big-txt-color: #{$color-light};
+  --toggle: #{$color-toggle-dark};
+}
 
 * {
   margin: 0;
@@ -10,20 +34,32 @@
 
 html {
   font-family: $font-main;
+  font-size: 14px;
 
-  $top-bg-color: $color-very-pale;
-  $bg-color: $color-light;
-  $card-bg-color: $color-grayish-light;
-  $small-txt-color: $color-grayish-dark;
-  $big-txt-color: $color-very-dark;
-  $toggle: $color-toggle-light;
+  // $top-bg-color: $color-very-pale;
+  // $bg-color: $color-light;
+  // $card-bg-color: $color-grayish-light;
+  // $small-txt-color: $color-grayish-dark;
+  // $big-txt-color: $color-very-dark;
+  // $toggle: $color-toggle-light;
 }
 
-html[data-theme="dark"] {
-  $top-bg-color: $color-dark;
-  $bg-color: $color-very-dark;
-  $card-bg-color: $color-desaturated-dark;
-  $small-txt-color: $color-desaturated;
-  $big-txt-color: $color-light;
-  $toggle: $color-toggle-dark;
+// html[data-theme="dark"] {
+//   $top-bg-color: $color-dark;
+//   $bg-color: $color-very-dark;
+//   $card-bg-color: $color-desaturated-dark;
+//   $small-txt-color: $color-desaturated;
+//   $big-txt-color: $color-light;
+//   $toggle: $color-toggle-dark;
+// }
+
+body {
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+  background-color: var(--top-bg-color);
 }
