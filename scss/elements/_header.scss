@@ -3,7 +3,7 @@
 .container {
   .header {
     .heading {
-      border-bottom: 1px solid var(--big-txt-color);
+      border-bottom: 0.071rem solid var(--big-txt-color);
       &__title {
         font-size: 1.7rem;
         font-weight: 700;
@@ -41,6 +41,9 @@
           float: right;
           border-radius: 100px;
           position: relative;
+          &:hover {
+            background: $color-toggle-dark;
+          }
         }
 
         label:after {
@@ -50,7 +53,7 @@
           left: 3px;
           width: 20px;
           height: 20px;
-          background: $color-light;
+          background: var(--top-bg-color);
           border-radius: 90px;
           transition: 0.3s;
         }
