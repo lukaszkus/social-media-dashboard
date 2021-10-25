@@ -81,6 +81,13 @@ html[data-theme=dark] {
   width: 45px;
 }
 
+.card {
+  background-color: var(--card-bg-color);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
