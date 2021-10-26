@@ -1,7 +1,6 @@
-@use "sass:color";
-
 .main {
   .social {
+    padding-bottom: 2rem;
     .card {
       display: flex;
       flex-direction: column;
@@ -11,14 +10,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1.5rem;
-        .card__heading-icon {
-          padding: 0 0.5rem;
-        }
-        .card__heading-name {
-          font-size: 0.8rem;
-          color: var(--small-txt-color);
-        }
+        padding-bottom: 1.4rem;
+      }
+      &__icon {
+        padding: 0 0.5rem;
+      }
+      &__name {
+        font-size: 0.8rem;
+        color: var(--small-txt-color);
       }
       &__value {
         font-size: 4rem;
@@ -31,31 +30,10 @@
         text-transform: uppercase;
         letter-spacing: 0.4rem;
         color: var(--small-txt-color);
+        padding-bottom: 1.8rem;
       }
-      &__day-value {
+      &__day {
         font-size: 0.8rem;
-        color: var(--small-txt-color);
-        padding: 1.5rem;
-        &--up {
-          color: $color-primary-up;
-          position: relative;
-          &::before {
-            content: url("../../images/icon-up.svg");
-            position: absolute;
-            left: 0.7rem;
-            top: 1.4rem;
-          }
-        }
-        &--down {
-          color: $color-primary-down;
-          position: relative;
-          &::before {
-            content: url("../../images/icon-down.svg");
-            position: absolute;
-            left: 0.7rem;
-            top: 1.4rem;
-          }
-        }
       }
       &--facebook {
         border-top: 0.3rem solid $color-facebook;
@@ -80,15 +58,72 @@
       }
     }
   }
+
+  .overview {
+    &__title {
+      font-size: 1.7rem;
+      color: var(--big-txt-color);
+      padding-bottom: 2rem;
+    }
+    .card-sm {
+      &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+      &__name {
+        font-size: 1rem;
+        color: var(--small-txt-color);
+      }
+      &__stats {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      &__value {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--big-txt-color);
+        line-height: 0.9;
+      }
+      &__day {
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
 
-.card {
+.card,
+.card-sm {
   background-color: var(--card-bg-color);
   border-radius: 0.3rem;
   margin-bottom: 1.5rem;
-  padding: 1rem;
+  padding: 2rem;
   &:hover {
     background-color: var(--card-bg-color-hover);
     cursor: pointer;
+  }
+}
+
+.value-up {
+  color: $color-primary-up;
+  position: relative;
+  &::before {
+    content: url("../../images/icon-up.svg");
+    position: absolute;
+    left: -0.8rem;
+    bottom: 0.15rem;
+  }
+}
+
+.value-down {
+  color: $color-primary-down;
+  position: relative;
+  &::before {
+    content: url("../../images/icon-down.svg");
+    position: absolute;
+    left: -0.8rem;
+    bottom: 0.15rem;
   }
 }

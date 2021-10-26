@@ -1,0 +1,12 @@
+.attribution {
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 1rem;
+  color: var(--small-txt-color);
+  a {
+    color: var(--small-txt-color);
+  }
+  a:hover {
+    color: $color-primary-down;
+  }
+}

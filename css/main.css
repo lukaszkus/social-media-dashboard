@@ -83,6 +83,9 @@ html[data-theme=dark] {
   width: 45px;
 }
 
+.main .social {
+  padding-bottom: 2rem;
+}
 .main .social .card {
   display: flex;
   flex-direction: column;
@@ -93,12 +96,12 @@ html[data-theme=dark] {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  padding-bottom: 1.4rem;
 }
-.main .social .card__heading .card__heading-icon {
+.main .social .card__icon {
   padding: 0 0.5rem;
 }
-.main .social .card__heading .card__heading-name {
+.main .social .card__name {
   font-size: 0.8rem;
   color: var(--small-txt-color);
 }
@@ -113,31 +116,10 @@ html[data-theme=dark] {
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   color: var(--small-txt-color);
+  padding-bottom: 1.8rem;
 }
-.main .social .card__day-value {
+.main .social .card__day {
   font-size: 0.8rem;
-  color: var(--small-txt-color);
-  padding: 1.5rem;
-}
-.main .social .card__day-value--up {
-  color: #1db489;
-  position: relative;
-}
-.main .social .card__day-value--up::before {
-  content: url("../../images/icon-up.svg");
-  position: absolute;
-  left: 0.7rem;
-  top: 1.4rem;
-}
-.main .social .card__day-value--down {
-  color: #dc414c;
-  position: relative;
-}
-.main .social .card__day-value--down::before {
-  content: url("../../images/icon-down.svg");
-  position: absolute;
-  left: 0.7rem;
-  top: 1.4rem;
 }
 .main .social .card--facebook {
   border-top: 0.3rem solid #198ff5;
@@ -160,16 +142,82 @@ html[data-theme=dark] {
 .main .social .card--youtube {
   border-top: 0.3rem solid #c4032a;
 }
+.main .overview__title {
+  font-size: 1.7rem;
+  color: var(--big-txt-color);
+  padding-bottom: 2rem;
+}
+.main .overview .card-sm__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.main .overview .card-sm__name {
+  font-size: 1rem;
+  color: var(--small-txt-color);
+}
+.main .overview .card-sm__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.main .overview .card-sm__value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--big-txt-color);
+  line-height: 0.9;
+}
+.main .overview .card-sm__day {
+  font-size: 0.8rem;
+}
 
-.card {
+.card,
+.card-sm {
   background-color: var(--card-bg-color);
   border-radius: 0.3rem;
   margin-bottom: 1.5rem;
-  padding: 1rem;
+  padding: 2rem;
 }
-.card:hover {
+.card:hover,
+.card-sm:hover {
   background-color: var(--card-bg-color-hover);
   cursor: pointer;
+}
+
+.value-up {
+  color: #1db489;
+  position: relative;
+}
+.value-up::before {
+  content: url("../../images/icon-up.svg");
+  position: absolute;
+  left: -0.8rem;
+  bottom: 0.15rem;
+}
+
+.value-down {
+  color: #dc414c;
+  position: relative;
+}
+.value-down::before {
+  content: url("../../images/icon-down.svg");
+  position: absolute;
+  left: -0.8rem;
+  bottom: 0.15rem;
+}
+
+.attribution {
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 1rem;
+  color: var(--small-txt-color);
+}
+.attribution a {
+  color: var(--small-txt-color);
+}
+.attribution a:hover {
+  color: #dc414c;
 }
 
 * {

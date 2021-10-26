@@ -7,6 +7,7 @@
 //import elements
 @import "./elements/header";
 @import "./elements/main";
+@import "./elements/footer";
 
 * {
   margin: 0;
@@ -18,20 +19,6 @@ html {
   font-family: $font-main;
   font-size: 14px;
 }
-
-//   --top-bg-color: #{$color-very-pale};
-//   --bg-color: #{$color-light};
-//   --card-bg-color: #{$color-grayish-light};
-//   --small-txt-color: #{$color-grayish-dark};
-//   --big-txt-color: #{$color-very-dark};
-//   --toggle: #{$color-toggle-light};
-
-//   --top-bg-color: #{$color-dark};
-//   --bg-color: #{$color-very-dark};
-//   --card-bg-color: #{$color-desaturated-dark};
-//   --small-txt-color: #{$color-desaturated};
-//   --big-txt-color: #{$color-light};
-//   --toggle: #{$color-toggle-dark};
 
 body {
   background-color: var(--bg-color);
