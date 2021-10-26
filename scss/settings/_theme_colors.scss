@@ -5,6 +5,7 @@ html {
   --small-txt-color: #{$color-grayish-dark};
   --big-txt-color: #{$color-very-dark};
   --toggle: #{$color-toggle-light};
+  --card-bg-color-hover: #{$color-grayish-light-darken};
 }
 
 html[data-theme="dark"] {
@@ -14,4 +15,5 @@ html[data-theme="dark"] {
   --small-txt-color: #{$color-desaturated};
   --big-txt-color: #{$color-light};
   --toggle: #{$color-toggle-dark};
+  --card-bg-color-hover: #{$color-desaturated-dark-lighten};
 }

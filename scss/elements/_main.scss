@@ -1,15 +1,94 @@
-// .main {
-//   .social {
-//     .card {
-//     }
-//   }
-//   .overview {
-//   }
-// }
+@use "sass:color";
+
+.main {
+  .social {
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      &__heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+        .card__heading-icon {
+          padding: 0 0.5rem;
+        }
+        .card__heading-name {
+          font-size: 0.8rem;
+          color: var(--small-txt-color);
+        }
+      }
+      &__value {
+        font-size: 4rem;
+        font-weight: 700;
+        color: var(--big-txt-color);
+        letter-spacing: -0.15rem;
+      }
+      &__fans {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        color: var(--small-txt-color);
+      }
+      &__day-value {
+        font-size: 0.8rem;
+        color: var(--small-txt-color);
+        padding: 1.5rem;
+        &--up {
+          color: $color-primary-up;
+          position: relative;
+          &::before {
+            content: url("../../images/icon-up.svg");
+            position: absolute;
+            left: 0.7rem;
+            top: 1.4rem;
+          }
+        }
+        &--down {
+          color: $color-primary-down;
+          position: relative;
+          &::before {
+            content: url("../../images/icon-down.svg");
+            position: absolute;
+            left: 0.7rem;
+            top: 1.4rem;
+          }
+        }
+      }
+      &--facebook {
+        border-top: 0.3rem solid $color-facebook;
+      }
+      &--twitter {
+        border-top: 0.3rem solid $color-twitter;
+      }
+      &--instagram {
+        position: relative;
+        &::before {
+          content: "";
+          background: $gradient-instagram;
+          top: 0;
+          height: 0.3rem;
+          width: 100%;
+          position: absolute;
+          border-radius: 0.3rem 0.3rem 0 0;
+        }
+      }
+      &--youtube {
+        border-top: 0.3rem solid $color-youtube;
+      }
+    }
+  }
+}
 
 .card {
   background-color: var(--card-bg-color);
-  border-radius: 1rem;
-  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1.5rem;
   padding: 1rem;
+  &:hover {
+    background-color: var(--card-bg-color-hover);
+    cursor: pointer;
+  }
 }

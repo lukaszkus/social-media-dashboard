@@ -8,20 +8,20 @@
         font-size: 1.7rem;
         font-weight: 700;
         color: var(--big-txt-color);
-        padding: 3rem 0 0.5rem 0;
+        padding: 2rem 0 0.5rem 0;
       }
       &__subtitle {
         font-size: 1rem;
         color: var(--small-txt-color);
-        padding-bottom: 2rem;
+        padding-bottom: 1.5rem;
       }
     }
     .theme {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 0 3rem 0;
-      &__name {
+      padding: 1rem 0 2.5rem 0;
+      &__mode {
         font-size: 1rem;
         color: var(--small-txt-color);
       }

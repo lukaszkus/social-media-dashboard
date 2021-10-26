@@ -12,13 +12,14 @@
 </head>
 <body>
   <div class="container">
+    <!-- Header -->
     <header class="header">
       <div class="heading">
         <h1 class="heading__title">Social Media Dashboard</h1>
         <h3 class="heading__subtitle">Total Followers: 23,004</h3>
       </div>
       <div class="theme">
-        <h3 class="theme__name">Dark Mode</h3>
+        <h3 class="theme__mode">Dark Mode</h3>
         <div class="theme__toggle">
           <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
         </div>
@@ -26,102 +27,113 @@
     </header>
     
     <main class="main">
+      <!-- Social section -->
       <section class="social">
-        <div class="card">
-          <i class="card__icon"></i>
-          <h3 class="card__user">@nathanf</h3>
-          <span class="card__total-value">1987</span>
+        <div class="card card--facebook">
+          <div class="card__heading">
+            <img src="images/icon-facebook.svg" class="card__heading-icon" alt="facebook icon"/>
+            <h3 class="card__heading-name">@nathanf</h3>
+          </div>
+          <span class="card__value">1987</span>
           <p class="card__fans">Followers</p>
-          <h3 class="card__day-value">12 Today</h3>
+          <h3 class="card__day-value card__day-value--up">12 Today</h3>
         </div>
 
-        <div class="card">
-          <i class="card__icon"></i>
-          <h3 class="card__user">@nathanf</h3>
-          <span class="card__total-value">1044</span>
+        <div class="card card--twitter">
+          <div class="card__heading">
+            <img src="images/icon-twitter.svg" class="card__heading-icon" alt="twitter icon"/>
+            <h3 class="card__heading-name">@nathanf</h3>
+          </div>
+          <span class="card__value">1044</span>
           <p class="card__fans">Followers</p>
-          <h3 class="card__day-value">99 Today</h3>
+          <h3 class="card__day-value card__day-value--up">99 Today</h3>
         </div>
 
-        <div class="card">
-          <i class="card__icon"></i>
-          <h3 class="card__user">@realnathanf</h3>
-          <span class="card__total-value">11k</span>
+        <div class="card card--instagram">
+          <div class="card__heading">
+            <img src="images/icon-instagram.svg" class="card__heading-icon" alt="instagram icon"/>
+            <h3 class="card__heading-name">@realnathanf</h3>
+          </div>
+          <span class="card__value">11k</span>
           <p class="card__fans">Followers</p>
-          <h3 class="card__day-value">1099 Today</h3>
+          <h3 class="card__day-value card__day-value--up">1099 Today</h3>
         </div>
 
-        <div class="card">
-          <i class="card__icon"></i>
-          <h3 class="card__user">Nathan F.</h3>
-          <span class="card__total-value">8239</span>
+        <div class="card card--youtube">
+          <div class="card__heading">
+            <img src="images/icon-youtube.svg" class="card__heading-icon" alt="youtube icon"/>
+            <h3 class="card__heading-name">Nathan F.</h3>
+          </div>
+          <span class="card__value">8239</span>
           <p class="card__fans">Subscribers</p>
-          <h3 class="card__day-value">144 Today</h3>
+          <h3 class="card__day-value card__day-value--down">144 Today</h3>
         </div>
-
       </section>
+
+      <!-- Overview section -->
       <section class="overview">
         <h2 class="overview__title">Overview - Today</h2>
 
         <div class="card">
           <h3 class="card__user">Page Views</h3>
           <i class="card__icon"></i>
-          <span class="card__total-value">87</span>
+          <span class="card__value">87</span>
           <h3 class="card__day-value">3%</h3>
         </div>
 
         <div class="card">
           <h3 class="card__user">Likes</h3>
           <i class="card__icon"></i>
-          <span class="card__total-value">52</span>
+          <span class="card__value">52</span>
           <h3 class="card__day-value">2%</h3>
         </div>
 
         <div class="card">
           <h3 class="card__user">Likes</h3>
           <i class="card__icon"></i>
-          <span class="card__total-value">5462</span>
+          <span class="card__value">5462</span>
           <h3 class="card__day-value">2257%</h3>
         </div>
 
         <div class="card">
           <h3 class="card__user">Profile views</h3>
           <i class="card__icon"></i>
-          <span class="card__total-value">52k</span>
+          <span class="card__-value">52k</span>
           <h3 class="card__day-value">1375%</h3>
         </div>
 
         <div class="card">
           <h3 class="card__user">Retweets</h3>
           <i class="card__icon"></i>
-          <span class="card__total-value">117</span>
+          <span class="card__value">117</span>
           <h3 class="card__day-value">303%</h3>
         </div>
 
         <div class="card">
           <h3 class="card__user">Likes</h3>
           <i class="card__icon"></i>
-          <span class="card__total-value">507</span>
+          <span class="card__value">507</span>
           <h3 class="card__day-value">553%</h3>
         </div>
 
         <div class="card">
           <h3 class="card__user">Likes</h3>
           <i class="card__icon"></i>
-          <span class="card__total-value">107</span>
+          <span class="card__value">107</span>
           <h3 class="card__day-value">19%</h3>
         </div>
 
         <div class="card">
           <h3 class="card__user">Total Views</h3>
           <i class="card__icon"></i>
-          <span class="card__total-value">1407</span>
+          <span class="card__value">1407</span>
           <h3 class="card__day-value">12%</h3>
         </div>
 
       </section>
     </main>
-    
+
+    <!-- Footer -->
     <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
