@@ -41,6 +41,11 @@ html[data-theme=dark] {
   color: var(--big-txt-color);
   padding: 2rem 0 0.5rem 0;
 }
+@media (min-width: 48rem) {
+  .container .header .heading__title {
+    font-size: 2rem;
+  }
+}
 .container .header .heading__subtitle {
   font-size: 1rem;
   color: var(--small-txt-color);

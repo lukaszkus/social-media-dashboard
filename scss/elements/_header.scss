@@ -16,6 +16,9 @@
         font-weight: 700;
         color: var(--big-txt-color);
         padding: 2rem 0 0.5rem 0;
+        @include tablet-3-cols {
+          font-size: 2rem;
+        }
       }
       &__subtitle {
         font-size: 1rem;
