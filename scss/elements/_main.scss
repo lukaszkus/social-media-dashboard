@@ -1,11 +1,26 @@
 .main {
   .social {
     padding-bottom: 2rem;
+    @include tablet-2-cols {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
     .card {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      width: 100%;
+      @include tablet-2-cols {
+        width: 48%;
+      }
+      @include tablet-3-cols {
+        width: 31%;
+      }
+      @include desktop-4-cols {
+        width: 23%;
+      }
       &__heading {
         display: flex;
         justify-content: center;
@@ -60,12 +75,26 @@
   }
 
   .overview {
+    @include tablet-2-cols {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
     &__title {
       font-size: 1.7rem;
       color: var(--big-txt-color);
       padding-bottom: 2rem;
     }
     .card-sm {
+      @include tablet-2-cols {
+        width: 48%;
+      }
+      @include tablet-3-cols {
+        width: 31%;
+      }
+      @include desktop-4-cols {
+        width: 23%;
+      }
       &__heading {
         display: flex;
         justify-content: space-between;

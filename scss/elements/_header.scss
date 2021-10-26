@@ -1,7 +1,16 @@
 .container {
   .header {
+    @include tablet-3-cols {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 2rem;
+    }
     .heading {
       border-bottom: 0.071rem solid var(--big-txt-color);
+      @include tablet-3-cols {
+        border-bottom: none;
+      }
       &__title {
         font-size: 1.7rem;
         font-weight: 700;
@@ -19,9 +28,14 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 0 2.5rem 0;
+      @include tablet-3-cols {
+        justify-content: flex-end;
+        padding: 0;
+      }
       &__mode {
         font-size: 1rem;
         color: var(--small-txt-color);
+        padding-right: 1rem;
       }
       &__toggle {
         input[type="checkbox"] {

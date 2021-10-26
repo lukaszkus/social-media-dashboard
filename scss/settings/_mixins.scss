@@ -1,14 +1,21 @@
-$tablet-width: 500px;
-$desktop-width: 1000px;
+$tablet-2-cols-width: 32rem;
+$tablet-3-cols-width: 48rem;
+$desktop-4-cols-width: 64rem;
 
-@mixin tablet {
-  @media (min-width: $tablet-width) {
+@mixin tablet-2-cols {
+  @media (min-width: $tablet-2-cols-width) {
     @content;
   }
 }
 
-@mixin desktop {
-  @media (min-width: $desktop-width) {
+@mixin tablet-3-cols {
+  @media (min-width: $tablet-3-cols-width) {
+    @content;
+  }
+}
+
+@mixin desktop-4-cols {
+  @media (min-width: $desktop-4-cols-width) {
     @content;
   }
 }

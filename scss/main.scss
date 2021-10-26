@@ -16,8 +16,8 @@
 }
 
 html {
-  font-family: $font-main;
   font-size: 14px;
+  font-family: $font-main;
 }
 
 body {
@@ -27,8 +27,10 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 25px;
-
+  padding: 0 1.786rem;
+  @include desktop-4-cols {
+    max-width: 82.857rem;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -40,4 +42,12 @@ body {
     border-radius: 0 0 2rem 2rem;
     z-index: -1;
   }
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 500ms !important;
+  transition-delay: 0 !important;
 }
